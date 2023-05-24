@@ -4,9 +4,13 @@
     'Mike Mangini',
     'Jordan Rudess',
     'John Myung',
+    'James LaBrie',
   ];
 
-  for ($i=0; $i < 4; $i++) {
+  $numberOfItems = count($names);
+  // die(var_dump($numberOfItems));
+
+  for ($i=0; $i < $numberOfItems; $i++) {
     echo $names[$i] . '<br>';
   }
 ?>
