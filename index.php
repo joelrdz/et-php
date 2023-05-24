@@ -1,13 +1,22 @@
 <?php
-  $names = [
-    'John Petrucci',
-    'Mike Mangini',
-    'Jordan Rudess',
-    'John Myung',
-    'James LaBrie',
+  $players = [
+    [
+      'name' => 'Cristiano Ronaldo',
+      'age' => 37,
+      'country' => 'Portugal',
+      'position' => 'striker',
+    ],
+    [
+      'name' => 'David de Gea',
+      'age' => 31,
+      'country' => 'Spain',
+      'position' => 'goalkeeper',
+    ],
   ];
 
-  foreach ($names as $name) {
-    echo $name . '<br>';
+  foreach ($players as $player) {
+    echo "Name: " . $player['name'] . '<br>' .
+      "Age: " . $player['age'] . '<br>' .
+      "Position: " . $player['position'] . '<br><hr>';
   }
 ?>
