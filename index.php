@@ -1,18 +1,11 @@
 <?php
-  $names = [
-    'Jon',
-    'Ned',
-    'Arya',
-    'Rob',
+  $players = [
+    'guitarist' => 'John Petrucci',
+    'drummer' => 'Mike Mangini',
+    'keyboardist' => 'Jordan Rudess',
+    'bassist' => 'John Myung',
+    'vocalist' => 'James LaBrie',
   ];
 
-  $ages = [
-    22,
-    46,
-    14,
-    25,
-  ];
-
-  echo $names[2];
-  echo $ages[2];
+  echo $players['drummer'];
 ?>
