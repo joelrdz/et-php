@@ -7,10 +7,7 @@
     'James LaBrie',
   ];
 
-  $numberOfItems = count($names);
-  // die(var_dump($numberOfItems));
-
-  for ($i=0; $i < $numberOfItems; $i++) {
-    echo $names[$i] . '<br>';
+  foreach ($names as $key => $value) {
+    echo $key . $value . '<br>';
   }
 ?>
