@@ -1,16 +1,18 @@
 <?php
-  $taskCompleted = true;
-  $price = 10;
+  $names = [
+    'Jon',
+    'Ned',
+    'Arya',
+    'Rob',
+  ];
 
-  if ($taskCompleted) {
-    echo 'Task completed';
-  } else {
-    echo 'Task not completed';
-  }
+  $ages = [
+    22,
+    46,
+    14,
+    25,
+  ];
 
-  if ($price <= 10) {
-    echo 'Buy';
-  } else {
-    echo 'Do not buy';
-  }
+  echo $names[2];
+  echo $ages[2];
 ?>
