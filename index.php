@@ -1,31 +1,18 @@
 <?php
   $players = [
-    'goalkeepers' => [
-      'David de Gea',
-      'Tom Heaton',
-      'Matej Kovar',
+    [
+      'name' => 'Cristiano Ronaldo',
+      'age' => 37,
+      'country' => 'Portugal',
+      'position' => 'striker',
     ],
-    'defenders' => [
-      'Lisandro Martinez',
-      'Raphael Varane',
-      'Tyrell Malacia',
-      'Harry Maguire',
-      'Diogo Dalot',
-      'Luke Shaw',
-    ],
-    'midfielders' => [
-      'Bruno Fernandez',
-      'Scott McTominay',
-      'Casemiro',
-      'Donny van de Beek',
-    ],
-    'strikers' => [
-      'Cristiano Ronaldo',
-      'Marcus Rashford',
-      'Antony',
-      'Jadon Sancho',
+    [
+      'name' => 'David de Gea',
+      'age' => 31,
+      'country' => 'Spain',
+      'position' => 'goalkeeper',
     ],
   ];
 
-  echo $players['strikers'][0];
+  echo $players[1]['name'];
 ?>
