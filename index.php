@@ -7,7 +7,7 @@
     'James LaBrie',
   ];
 
-  foreach ($names as $key => $value) {
-    echo $key . $value . '<br>';
+  foreach ($names as $name) {
+    echo $name . '<br>';
   }
 ?>
