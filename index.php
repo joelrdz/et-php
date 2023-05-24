@@ -1,11 +1,16 @@
 <?php
-  $name = 'Jon'; // string
-  $quantity = 15; // int
-  $price = 9.99; // float
-  $isLoading = true; // bool
-  $startDate = null; // null
+  $taskCompleted = true;
+  $price = 10;
 
-  var_dump($startDate);
+  if ($taskCompleted) {
+    echo 'Task completed';
+  } else {
+    echo 'Task not completed';
+  }
 
-  // echo "Hello {$name}";
+  if ($price <= 10) {
+    echo 'Buy';
+  } else {
+    echo 'Do not buy';
+  }
 ?>
