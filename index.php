@@ -16,6 +16,6 @@
 
   echo '<h1>My tasks</h1>';
   foreach ($tasks as $task) {
-    echo $task['title'] . '<br>';
+    echo $task['title'] . ($task['completed'] ? '✅' : '❌') . '<br>';
   }
 ?>
