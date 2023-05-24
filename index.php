@@ -1,9 +1,21 @@
 <?php
-  $language = 'PHP';
+  $tasks = [
+    [
+      'title' => 'Study PHP',
+      'completed' => true,
+    ],
+    [
+      'title' => 'Buy food',
+      'completed' => false,
+    ],
+    [
+      'title' => 'Workout',
+      'completed' => true,
+    ],
+  ];
 
-  dd($language);
-
-  function dd($value) {
-    return die(var_dump($value));
+  echo '<h1>My tasks</h1>';
+  foreach ($tasks as $task) {
+    echo $task['title'] . '<br>';
   }
 ?>
