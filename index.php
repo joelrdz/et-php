@@ -9,7 +9,41 @@
 <body>
   <?php
     $greeting = 'Hello world';
+
+    $tasks = [
+      [
+        'title' => 'Study PHP',
+        'completed' => true,
+      ],
+      [
+        'title' => 'Buy food',
+        'completed' => false,
+      ],
+      [
+        'title' => 'Workout',
+        'completed' => true,
+      ],
+    ];
+
+    $completedTasks = array_filter($tasks, function ($task) {
+      return $task['completed'];
+    });
+
+    $pendingTasks = array_filter($tasks, function ($task) {
+      return !$task['completed'];
+    });
   ?>
   <h1><?= $greeting; ?></h1>
+
+  <h2>Completed</h2>
+  <ul>
+    <li>Study PHP</li>
+    <li>Workout</li>
+  </ul>
+
+  <h2>Pending</h2>
+  <ul>
+    <li>Buy food</li>
+  </ul>
 </body>
 </html>
