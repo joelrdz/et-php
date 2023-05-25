@@ -1,27 +1,31 @@
 <?php
-  $greeting = 'Hello world';
+require 'functions.php';
 
-  $tasks = [
-    [
-      'title' => 'Study PHP',
-      'completed' => true,
-    ],
-    [
-      'title' => 'Buy food',
-      'completed' => false,
-    ],
-    [
-      'title' => 'Workout',
-      'completed' => true,
-    ],
-  ];
+$greeting = 'Hello world';
 
-  $completedTasks = array_filter($tasks, function ($task) {
-    return $task['completed'];
-  });
+$tasks = [
+  [
+    'title' => 'Study PHP',
+    'completed' => true,
+  ],
+  [
+    'title' => 'Buy food',
+    'completed' => false,
+  ],
+  [
+    'title' => 'Workout',
+    'completed' => true,
+  ],
+];
 
-  $pendingTasks = array_filter($tasks, function ($task) {
-    return !$task['completed'];
-  });
+$completedTasks = array_filter($tasks, function ($task) {
+  return $task['completed'];
+});
 
-  require 'index.view.php';
+$pendingTasks = array_filter($tasks, function ($task) {
+  return !$task['completed'];
+});
+
+// dd($pendingTasks);
+
+require 'index.view.php';
