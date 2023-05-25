@@ -37,13 +37,20 @@
 
   <h2>Completed</h2>
   <ul>
-    <li>Study PHP</li>
-    <li>Workout</li>
+    <?php
+      foreach ($completedTasks as $task) {
+        echo '<li>' . $task['title'] . '</li>';
+      }
+    ?>
   </ul>
 
   <h2>Pending</h2>
   <ul>
-    <li>Buy food</li>
+    <?php
+      foreach ($pendingTasks as $task) {
+        echo '<li>' . $task['title'] . '</li>';
+      }
+    ?>
   </ul>
 </body>
 </html>
