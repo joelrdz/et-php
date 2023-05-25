@@ -1,52 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PHP and HTML</title>
-</head>
-<body>
-  <?php
-    $greeting = 'Hello world';
+<?php
+  $greeting = 'Hello world';
 
-    $tasks = [
-      [
-        'title' => 'Study PHP',
-        'completed' => true,
-      ],
-      [
-        'title' => 'Buy food',
-        'completed' => false,
-      ],
-      [
-        'title' => 'Workout',
-        'completed' => true,
-      ],
-    ];
+  $tasks = [
+    [
+      'title' => 'Study PHP',
+      'completed' => true,
+    ],
+    [
+      'title' => 'Buy food',
+      'completed' => false,
+    ],
+    [
+      'title' => 'Workout',
+      'completed' => true,
+    ],
+  ];
 
-    $completedTasks = array_filter($tasks, function ($task) {
-      return $task['completed'];
-    });
+  $completedTasks = array_filter($tasks, function ($task) {
+    return $task['completed'];
+  });
 
-    $pendingTasks = array_filter($tasks, function ($task) {
-      return !$task['completed'];
-    });
-  ?>
-  <h1><?= $greeting; ?></h1>
+  $pendingTasks = array_filter($tasks, function ($task) {
+    return !$task['completed'];
+  });
 
-  <h2>Completed</h2>
-  <ul>
-    <?php foreach ($completedTasks as $task): ?>
-      <li><?= $task['title'] ?></li>
-    <?php endforeach; ?>
-  </ul>
-
-  <h2>Pending</h2>
-  <ul>
-    <?php foreach ($pendingTasks as $task): ?>
-      <li><?= $task['title'] ?></li>
-    <?php endforeach; ?>
-  </ul>
-</body>
-</html>
+  require 'index.view.php';
