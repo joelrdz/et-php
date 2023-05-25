@@ -15,7 +15,18 @@
   ];
 
   echo '<h1>My tasks</h1>';
+
+  echo '<h2>Completed</h2>';
   foreach ($tasks as $task) {
-    echo $task['title'] . ($task['completed'] ? '✅' : '❌') . '<br>';
+    if ($task['completed']) {
+      echo $task['title'] . ($task['completed'] ? '✅' : '❌') . '<br>';
+    }
+  }
+
+  echo '<h2>Pending</h2>';
+  foreach ($tasks as $task) {
+    if (!$task['completed']) {
+      echo $task['title'] . ($task['completed'] ? '✅' : '❌') . '<br>';
+    }
   }
 ?>
