@@ -3,6 +3,19 @@ require 'functions.php';
 
 $greeting = 'Hello world';
 
+class Task {
+  public $title;
+  public $completed = false;
+
+  public function complete() {
+    $this->completed = true;
+  }
+}
+
+$task = new Task;
+$task->complete();
+dd($task);
+
 $tasks = [
   [
     'title' => 'Study PHP',
