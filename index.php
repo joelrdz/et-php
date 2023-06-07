@@ -6,7 +6,7 @@ $greeting = 'Hello world';
 
 $tasks = [
   new Task('Study PHP', true),
-  new Task('Buy food', false),
+  new Task('Buy food'),
   new Task('Workout', true),
 ];
 
