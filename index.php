@@ -17,23 +17,10 @@ class Task {
   }
 }
 
-$task = new Task('Study PHP', true);
-// $task->complete();
-dd($task);
-
 $tasks = [
-  [
-    'title' => 'Study PHP',
-    'completed' => true,
-  ],
-  [
-    'title' => 'Buy food',
-    'completed' => false,
-  ],
-  [
-    'title' => 'Workout',
-    'completed' => true,
-  ],
+  new Task('Study PHP', true),
+  new Task('Buy food', false),
+  new Task('Workout', true),
 ];
 
 $completedTasks = array_filter($tasks, function ($task) {
