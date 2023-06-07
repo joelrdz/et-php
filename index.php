@@ -5,7 +5,7 @@ require 'Models/Task.php';
 $greeting = 'Hello world';
 
 $tasks = [
-  new Task('Study PHP', true),
+  new Task(completed: true, title: 'Study PHP'),
   new Task('Buy food'),
   new Task('Workout', true),
 ];
