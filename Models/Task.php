@@ -12,10 +12,10 @@ class Task {
 
   public function save($name) {
     $file = fopen($name, 'w');
-    fwrite($file, "Title: {$this->title}\nCompleted: {$this->completed}");
+    fwrite($file, "Title: {$this->title}\nCompleted: " . ($this->completed ? 'Si' : 'No'));
     fclose($file);
   }
 }
 
-$task = new Task('Buy food');
+$task = new Task('Buy food', true);
 $task->save('task-1.txt');
