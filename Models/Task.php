@@ -10,9 +10,14 @@ class Task {
     $this->completed = true;
   }
 
+  public function buildString() {
+    return "Title: {$this->title}\n" .
+    "Completed: " . ($this->completed ? 'Si' : 'No');
+  }
+
   public function save($name) {
     $file = fopen($name, 'w');
-    fwrite($file, "Title: {$this->title}\nCompleted: " . ($this->completed ? 'Si' : 'No'));
+    fwrite($file, $this->buildString());
     fclose($file);
   }
 }
