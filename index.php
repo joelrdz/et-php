@@ -1,6 +1,7 @@
 <?php
 require 'functions.php';
 require 'Models/Task.php';
+require 'Enums/ColorsEnum.php';
 
 $greeting = 'Hello world';
 
@@ -10,9 +11,9 @@ $tasks = [
   new Task('Workout', true),
 ];
 
-$tasks[0]->setColor('blue');
-$tasks[1]->setColor('green');
-$tasks[2]->setColor('red');
+$tasks[0]->setColor(ColorsEnum::BLUE->name);
+$tasks[1]->setColor(ColorsEnum::GREEN->name);
+$tasks[2]->setColor(ColorsEnum::RED->name);
 
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
