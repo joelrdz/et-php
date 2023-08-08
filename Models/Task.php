@@ -16,7 +16,13 @@ class Model {
     return $string;
   }
 
-  public function save($name) {
+  public function save($name = null) {
+    if (is_null($name)) {
+      $me = new ReflectionClass($this);
+      $fileName = $me->getName();
+      $name = lcfirst($fileName) . '.txt';
+    }
+
     $file = fopen($name, 'w');
     fwrite($file, $this->buildString());
     fclose($file);
@@ -43,7 +49,7 @@ class Exam extends Model {
 }
 
 $task = new Task('Buy food', true);
-$task->save('task-1.txt');
+$task->save();
 
 $exam = new Exam('PHP Exam', 'PHP 8');
 $exam->save('exam-1.txt');
