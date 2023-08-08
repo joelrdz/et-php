@@ -11,9 +11,9 @@ $tasks = [
   new Task('Workout', true),
 ];
 
-$tasks[0]->setColor(ColorsEnum::BLUE->name);
-$tasks[1]->setColor(ColorsEnum::GREEN->name);
-$tasks[2]->setColor(ColorsEnum::RED->name);
+$tasks[0]->setColor(ColorsEnum::BLUE->value);
+$tasks[1]->setColor(ColorsEnum::GREEN->value);
+$tasks[2]->setColor(ColorsEnum::RED->value);
 
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
