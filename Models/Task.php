@@ -9,7 +9,8 @@ class Model {
     $string = '';
     foreach ($properties as $property) {
       $propertyName = $property->name;
-      $string = $string . "{$propertyName}: {$this->$propertyName}\n";
+      $propertyValue = $this->$propertyName;
+      $string = $string . "{$propertyName}: " . (is_bool($propertyValue) ? var_export($propertyValue, true) : $propertyValue) . "\n";
     }
 
     return $string;

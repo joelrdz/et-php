@@ -1,2 +1,2 @@
 title: Buy food
-completed: 1
+completed: true
