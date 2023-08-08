@@ -10,6 +10,10 @@ $tasks = [
   new Task('Workout', true),
 ];
 
+$tasks[0]->setColor('blue');
+$tasks[1]->setColor('green');
+$tasks[2]->setColor('red');
+
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
 });

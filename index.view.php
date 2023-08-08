@@ -12,14 +12,14 @@
   <h2>Completed</h2>
   <ul>
     <?php foreach ($completedTasks as $task): ?>
-      <li><?= $task->title ?></li>
+      <li style="color: <?= $task->color ?>;"><?= $task->title ?></li>
     <?php endforeach; ?>
   </ul>
 
   <h2>Pending</h2>
   <ul>
     <?php foreach ($pendingTasks as $task): ?>
-      <li><?= $task->title ?></li>
+      <li style="color: <?= $task->color ?>;"><?= $task->title ?></li>
     <?php endforeach; ?>
   </ul>
 </body>
