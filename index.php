@@ -5,6 +5,8 @@ require 'Enums/ColorsEnum.php';
 
 $greeting = 'Hello world';
 
+new PDO('mysql:host=127.0.0.1;dbname=todos', 'root', '');
+
 $tasks = [
   new Task(completed: true, title: 'Study PHP'),
   new Task('Buy food'),
