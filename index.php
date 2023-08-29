@@ -5,11 +5,15 @@ require 'Enums/ColorsEnum.php';
 
 $greeting = 'Hello world';
 
-try {
-  $pdo = new PDO('mysql:host=127.0.0.1;dbname=todos', 'root', '');
-} catch (PDOException $error) {
-  die($error->getMessage());
+function dbConnect() {
+  try {
+    return new PDO('mysql:host=127.0.0.1;dbname=todos', 'root', '');
+  } catch (PDOException $error) {
+    die($error->getMessage());
+  }
 }
+
+$pdo = dbConnect();
 
 $query = $pdo->prepare('select * from tasks');
 
