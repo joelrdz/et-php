@@ -4,7 +4,7 @@ $query = require 'bootstrap.php';
 
 $greeting = 'Hello world';
 
-$tasks = $query->selectAll();
+$tasks = $query->selectAll('tasks', 'Task');
 
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;

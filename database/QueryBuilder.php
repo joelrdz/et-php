@@ -7,9 +7,9 @@ class QueryBuilder {
     $this->pdo = $pdo;
   }
 
-  public function selectAll() {
-    $query = $this->pdo->prepare('select * from tasks');
+  public function selectAll($table, $class) {
+    $query = $this->pdo->prepare("select * from {$table}");
     $query->execute();
-    return $query->fetchAll(PDO::FETCH_CLASS, 'Task');
+    return $query->fetchAll(PDO::FETCH_CLASS, $class);
   }
 }
