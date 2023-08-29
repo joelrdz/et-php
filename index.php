@@ -6,7 +6,7 @@ require 'database/Connection.php';
 
 $greeting = 'Hello world';
 
-$pdo = (new Connection)->start();
+$pdo = Connection::start();
 
 $tasks = getAllTasks($pdo);
 
