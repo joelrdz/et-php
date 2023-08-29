@@ -15,7 +15,7 @@ $query = $pdo->prepare('select * from tasks');
 
 $query->execute();
 
-dd($query->fetchAll());
+dd($query->fetchAll(PDO::FETCH_OBJ));
 
 $tasks = [
   new Task(completed: true, title: 'Study PHP'),
