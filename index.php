@@ -8,7 +8,7 @@ $greeting = 'Hello world';
 try {
   new PDO('mysql:host=127.0.0.1;dbname=todes', 'root', '');
 } catch (PDOException $error) {
-  die('Connection error');
+  die($error->getMessage());
 }
 
 $tasks = [
