@@ -1,20 +1,19 @@
 <?php
-require 'functions.php';
 require 'Models/Task.php';
-require 'Enums/ColorsEnum.php';
 require 'database/Connection.php';
+require 'database/QueryBuilder.php';
 
 $greeting = 'Hello world';
 
 $pdo = Connection::start();
 
-$tasks = getAllTasks($pdo);
+$query = new QueryBuilder;
+
+$tasks = $query->selectAll($pdo);
 
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
 });
-
-$tasks[0]->setColor(ColorsEnum::BLUE->value);
 
 $pendingTasks = array_filter($tasks, function ($task) {
   return !$task->completed;
