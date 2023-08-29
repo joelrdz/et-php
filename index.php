@@ -1,13 +1,8 @@
 <?php
 require 'Models/Task.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
+$query = require 'bootstrap.php';
 
 $greeting = 'Hello world';
-
-$pdo = Connection::start();
-
-$query = new QueryBuilder($pdo);
 
 $tasks = $query->selectAll();
 
