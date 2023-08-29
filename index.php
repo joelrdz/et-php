@@ -6,10 +6,16 @@ require 'Enums/ColorsEnum.php';
 $greeting = 'Hello world';
 
 try {
-  new PDO('mysql:host=127.0.0.1;dbname=todes', 'root', '');
+  $pdo = new PDO('mysql:host=127.0.0.1;dbname=todos', 'root', '');
 } catch (PDOException $error) {
   die($error->getMessage());
 }
+
+$query = $pdo->prepare('select * from tasks');
+
+$query->execute();
+
+dd($query->fetchAll());
 
 $tasks = [
   new Task(completed: true, title: 'Study PHP'),
