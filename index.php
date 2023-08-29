@@ -13,6 +13,8 @@ $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
 });
 
+$tasks[0]->setColor(ColorsEnum::BLUE->value);
+
 $pendingTasks = array_filter($tasks, function ($task) {
   return !$task->completed;
 });

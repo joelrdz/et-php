@@ -15,5 +15,5 @@ function dbConnect() {
 function getAllTasks($pdo) {
   $query = $pdo->prepare('select * from tasks');
   $query->execute();
-  return $query->fetchAll(PDO::FETCH_OBJ);
+  return $query->fetchAll(PDO::FETCH_CLASS, 'Task');
 }
