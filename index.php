@@ -2,10 +2,12 @@
 require 'functions.php';
 require 'Models/Task.php';
 require 'Enums/ColorsEnum.php';
+require 'database/Connection.php';
 
 $greeting = 'Hello world';
 
-$pdo = dbConnect();
+$connection = new Connection;
+$pdo = $connection->start();
 
 $tasks = getAllTasks($pdo);
 
