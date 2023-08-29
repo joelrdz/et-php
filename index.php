@@ -7,9 +7,9 @@ $greeting = 'Hello world';
 
 $pdo = Connection::start();
 
-$query = new QueryBuilder;
+$query = new QueryBuilder($pdo);
 
-$tasks = $query->selectAll($pdo);
+$tasks = $query->selectAll();
 
 $completedTasks = array_filter($tasks, function ($task) {
   return $task->completed;
