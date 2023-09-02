@@ -15,7 +15,10 @@ class QueryBuilder {
   }
 
   public function create($table, $params) {
-    $sql = "insert into $table (title, completed) values (:title, :completed)";
+    $cols = implode(', ', array_keys($params));
+    $placeholders = ':' . implode(', :', array_keys($params));
+
+    $sql = "insert into $table ($cols) values ($placeholders)";
 
     try {
       $query = $this->pdo->prepare($sql);
