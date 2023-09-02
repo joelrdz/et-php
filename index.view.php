@@ -25,6 +25,7 @@
 
   <form action="create-task.php" method="POST">
     <input type="text" name="title">
+    <input type="color" name="color">
     <button type="submit">Save</button>
   </form>
 </body>
