@@ -1,6 +1,6 @@
 <?php
-require 'Models/Task.php';
 $query = require 'bootstrap.php';
+require 'Models/Task.php';
 
 $greeting = 'Hello world';
 
