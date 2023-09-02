@@ -14,8 +14,8 @@ class QueryBuilder {
     return $query->fetchAll(PDO::FETCH_CLASS, $class);
   }
 
-  public function create($params) {
-    $sql = "insert into tasks (title, completed) values (:title, :completed)";
+  public function create($table, $params) {
+    $sql = "insert into $table (title, completed) values (:title, :completed)";
 
     try {
       $query = $this->pdo->prepare($sql);
