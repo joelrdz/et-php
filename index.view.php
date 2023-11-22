@@ -19,7 +19,12 @@
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">➖</button>
         </form>
-        <form action="delete-task.php" method="POST" style="display: inline;">
+        <form
+          action="delete-task.php"
+          method="POST"
+          onsubmit="return confirm('Delete task?');"
+          style="display: inline;"
+        >
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">❌</button>
         </form>
@@ -37,7 +42,12 @@
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">✅</button>
         </form>
-        <form action="delete-task.php" method="POST" style="display: inline;">
+        <form
+          action="delete-task.php"
+          method="POST"
+          onsubmit="return confirm('Delete task?');"
+          style="display: inline;"
+        >
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">❌</button>
         </form>
