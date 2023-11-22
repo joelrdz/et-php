@@ -19,6 +19,10 @@
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">➖</button>
         </form>
+        <form action="delete-task.php" method="POST" style="display: inline;">
+          <input type="hidden" name="id" value="<?= $task->id ?>">
+          <button type="submit">❌</button>
+        </form>
       </li>
     <?php endforeach; ?>
   </ul>
@@ -32,6 +36,10 @@
           <input type="hidden" name="completed" value="1">
           <input type="hidden" name="id" value="<?= $task->id ?>">
           <button type="submit">✅</button>
+        </form>
+        <form action="delete-task.php" method="POST" style="display: inline;">
+          <input type="hidden" name="id" value="<?= $task->id ?>">
+          <button type="submit">❌</button>
         </form>
       </li>
     <?php endforeach; ?>
