@@ -7,6 +7,12 @@
   <title>PHP and HTML</title>
 </head>
 <body>
+  <nav>
+    <a href="contact.php">Contacto</a>
+    <a href="about.php">Nosotros</a>
+    <a href="services.php">Servicios</a>
+  </nav>
+
   <h1><?= $greeting; ?></h1>
 
   <h2>Completed</h2>
