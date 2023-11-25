@@ -1,5 +1,4 @@
 <?php
-$query = require 'bootstrap.php';
 
 $query->create('tasks', [
   'title' => $_POST['title'],
@@ -7,4 +6,4 @@ $query->create('tasks', [
   'completed' => 0,
 ]);
 
-header('Location: index.php');
+header('Location: /');
