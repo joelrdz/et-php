@@ -1,10 +1,9 @@
 <?php
 
-$query = require 'Core/bootstrap.php';
+require 'Core/bootstrap.php';
+$routes = require('routes.php');
 
 $url = Request::url();
-
-$routes = require('routes.php');
 
 $router = new Router;
 $router->register($routes);

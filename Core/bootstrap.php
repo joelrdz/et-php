@@ -13,4 +13,4 @@ $config = App::get('config');
 
 $pdo = Connection::start($config['database']);
 
-return new QueryBuilder($pdo);
+App::set('database', new QueryBuilder($pdo));
