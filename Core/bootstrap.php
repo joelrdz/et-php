@@ -8,9 +8,6 @@ require 'Models/Task.php';
 require 'functions.php';
 
 App::set('config', require 'config.php');
-
-$config = App::get('config');
-
-$pdo = Connection::start($config['database']);
-
-App::set('database', new QueryBuilder($pdo));
+App::set('database', new QueryBuilder(
+  Connection::start(App::get('config')['database'])
+));
