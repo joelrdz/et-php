@@ -8,9 +8,9 @@
 </head>
 <body>
   <nav>
-    <a href="Controllers/contact.php">Contacto</a>
-    <a href="Controllers/about.php">Nosotros</a>
-    <a href="Controllers/services.php">Servicios</a>
+    <a href="contact">Contacto</a>
+    <a href="about">Nosotros</a>
+    <a href="services">Servicios</a>
   </nav>
 
   <h1><?= $greeting; ?></h1>

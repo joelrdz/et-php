@@ -1,7 +1,8 @@
 <?php
 
 $query = require 'Core/bootstrap.php';
-require 'Controllers/index.php';
+
+$url = trim($_SERVER['REQUEST_URI'], '/');
 
 $routes = [
   '' => 'Controllers/index.php',
@@ -12,3 +13,4 @@ $routes = [
 
 $router = new Router;
 $router->register($routes);
+require $router->handle($url);

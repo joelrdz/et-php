@@ -6,4 +6,12 @@ class Router {
   public function register($routes) {
     $this->routes = $routes;
   }
+
+  public function handle($url) {
+    if (array_key_exists($url, $this->routes)) {
+      return $this->routes[$url];
+    }
+
+    die("Route doesn't exist.");
+  }
 }

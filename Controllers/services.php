@@ -1,3 +1,3 @@
 <?php
 
-require '../Views/services.view.php';
+require 'Views/services.view.php';
