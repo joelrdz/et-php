@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
+  <title>Contact</title>
 </head>
 <body>
-  <h1>Contacto</h1>
+  <?php require('partials/navbar.view.php') ?>
+  <h1>Contact</h1>
 </body>
 </html>

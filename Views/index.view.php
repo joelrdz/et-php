@@ -7,12 +7,7 @@
   <title>PHP and HTML</title>
 </head>
 <body>
-  <nav>
-    <a href="contact">Contacto</a>
-    <a href="about">Nosotros</a>
-    <a href="services">Servicios</a>
-  </nav>
-
+  <?php require('partials/navbar.view.php') ?>
   <h1><?= $greeting; ?></h1>
 
   <h2>Completed</h2>
