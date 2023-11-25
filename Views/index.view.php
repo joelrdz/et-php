@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PHP and HTML</title>
-</head>
-<body>
-  <?php require('partials/navbar.view.php') ?>
+<?php require('partials/head.view.php') ?>
   <h1><?= $greeting; ?></h1>
 
   <h2>Completed</h2>
@@ -61,5 +52,4 @@
     <input type="color" name="color">
     <button type="submit">Save</button>
   </form>
-</body>
-</html>
+<?php require('partials/footer.view.php') ?>
