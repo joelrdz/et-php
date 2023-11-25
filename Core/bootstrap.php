@@ -1,6 +1,7 @@
 <?php
 require 'database/Connection.php';
 require 'database/QueryBuilder.php';
+require 'Core/Request.php';
 require 'Core/Router.php';
 require 'Models/Task.php';
 require 'functions.php';

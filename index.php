@@ -2,7 +2,7 @@
 
 $query = require 'Core/bootstrap.php';
 
-$url = trim($_SERVER['REQUEST_URI'], '/');
+$url = Request::url();
 
 $routes = require('routes.php');
 
